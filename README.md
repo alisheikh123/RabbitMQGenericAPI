@@ -1,4 +1,4 @@
-# Producor Web API
+# Producor Web API Setup
     Required things to run the Rabbit MQ on you local environment
       1- Install Erlang ( https://www.erlang.org/downloads)
       2- Install Rabbit MQ (https://www.rabbitmq.com/install-windows.html)
