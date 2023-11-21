@@ -1,0 +1,23 @@
+﻿//ConnectionFactory factory = new ConnectionFactory();
+            // "guest"/"guest" by default, limited to localhost connections
+            //factory.UserName = "ale";
+            //factory.Password = "1234";
+            //factory.VirtualHost = "demohost";
+            //factory.HostName = "producerwebapi.applewoodofficial.com";
+
+            //IConnection connection = factory.CreateConnection();
+
+
+            //ConnectionFactory factory = new ConnectionFactory();
+            //factory.UserName = "alisheikh";
+            //factory.Password = "alisheikh";
+            //factory.VirtualHost = "/";
+            //factory.HostName = "rabbitmq://3.135.27.91";
+            //factory.Port = 15672;
+            //IConnection conn = factory.CreateConnection();
+
+
+         //   Convert Object to Bytes 
+
+    //var message = JsonConvert.SerializeObject(model);
+            //var encodeMessage = Encoding.Default.GetBytes(JsonConvert.SerializeObject(Regex.Replace(message, @"\s+", ""))); 
