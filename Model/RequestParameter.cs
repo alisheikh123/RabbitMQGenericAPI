@@ -4,19 +4,19 @@ namespace Producor_Web_API.Model
 {
     public enum TableEnum
     {
-        Users,
-        Products,
-        Orders
+        Users =1,
+        Products = 2,
+        Orders=3
     }
     public enum ActionEnum
     {
-        Add,
-        Delete,
-        Update,
-        GetAll,
-        Read,
-        GetById,
-        GetId
+        Add = 1,
+        Delete = 2,
+        Update = 3,
+        GetAll = 4,
+        Read =5 ,
+        GetById = 6,
+        GetId= 7
 
     }
     public class RequestParameter
