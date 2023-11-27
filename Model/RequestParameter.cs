@@ -4,27 +4,27 @@ namespace Producor_Web_API.Model
 {
     public enum TableEnum
     {
-        Users =1,
-        Products = 2,
-        Orders=3
+        users,
+        products,
+        orders
     }
     public enum ActionEnum
     {
-        Add = 1,
-        Delete = 2,
-        Update = 3,
-        GetAll = 4,
-        Read =5 ,
-        GetById = 6,
-        GetId= 7
+        add,
+        delete,
+        update,
+        getAll,
+        read,
+        getById,
+        getId
 
     }
     public class RequestParameter
     {
         [Required]
-        public TableEnum Table { get; set; }
+        public string Table { get; set; }
         [Required]
-        public ActionEnum Action { get; set; }
+        public string Action { get; set; }
         [Required]
         public string? Model { get; set; }
 
