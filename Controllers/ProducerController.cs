@@ -44,7 +44,7 @@ namespace Producor_Web_API.Controllers
                 var message = JsonConvert.SerializeObject(dataModel);
                 var encodeMessage = Encoding.Default.GetBytes(JsonConvert.SerializeObject(Regex.Replace(message, @"\s+", "")));
                 channel.BasicPublish("", "letterbox", null, encodeMessage);
-                conn.Close();
+                //conn.Close();
 
             }
             else
