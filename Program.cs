@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using Producor_Web_API.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(x => {
+    x.SchemaFilter<EnumSchemeFilter>();
+});
 var corsBuilder = new CorsPolicyBuilder();
 corsBuilder.AllowAnyHeader();
 corsBuilder.AllowAnyMethod();

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producor Web API", "Producor Web API.csproj", "{FAB76109-5507-491E-A8A4-EDC77CAF9D7C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsumerWebAPI", "..\ConsumerWebAPI\ConsumerWebAPI.csproj", "{9FDD64C4-9DA4-4DFB-98E1-91BB4F6FF6A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FAB76109-5507-491E-A8A4-EDC77CAF9D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAB76109-5507-491E-A8A4-EDC77CAF9D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAB76109-5507-491E-A8A4-EDC77CAF9D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FDD64C4-9DA4-4DFB-98E1-91BB4F6FF6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FDD64C4-9DA4-4DFB-98E1-91BB4F6FF6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FDD64C4-9DA4-4DFB-98E1-91BB4F6FF6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FDD64C4-9DA4-4DFB-98E1-91BB4F6FF6A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
