@@ -13,9 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors();
 builder.Services.AddScoped<IRabitMQProducer, RabbitMQService>();
-builder.Services.AddSwaggerGen(x => {
-    x.SchemaFilter<EnumSchemeFilter>();
-});
+builder.Services.AddSwaggerGen();
 var corsBuilder = new CorsPolicyBuilder();
 corsBuilder.AllowAnyHeader();
 corsBuilder.AllowAnyMethod();

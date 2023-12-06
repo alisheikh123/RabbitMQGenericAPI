@@ -22,25 +22,10 @@ namespace Producor_Web_API.Controllers
             _rabitMQProducer = rabitMQProducer;
         }
         [HttpPost]
-        public IActionResult GetApplicationsData(string table, string action, string model)
+        public IActionResult GetApplicationsData(RequestParameter model)
         {
-            if (Enum.IsDefined(typeof(TableEnum), table) && Enum.IsDefined(typeof(ActionEnum), action))
-            {
-                var dataModel = new RequestParameter
-                {
-                    Table = table,
-                    Action = action,
-                    Model = model
-
-                };
-                _rabitMQProducer.SendProductMessage(dataModel);
-
-            }
-            else
-            {
-                return NotFound("Invalid Table or Action Name");
-            }
-
+               
+           _rabitMQProducer.SendProductMessage(model);
             return Ok();
         }
         static byte[] SerializeObjects<T>(T obj)
