@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using Producor_Web_API.Controllers;
+using Producor_Web_API.Interface;
 using Producor_Web_API.Model;
+using Producor_Web_API.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +12,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors();
-builder.Services.AddSwaggerGen(x => {
-    x.SchemaFilter<EnumSchemeFilter>();
-});
+builder.Services.AddScoped<IRabitMQProducer, RabbitMQService>();
+builder.Services.AddSwaggerGen();
 var corsBuilder = new CorsPolicyBuilder();
 corsBuilder.AllowAnyHeader();
 corsBuilder.AllowAnyMethod();
@@ -46,8 +48,9 @@ app.UseCors(x => x
 app.UseRouting();
 app.UseCors("CorePolicy");
 app.UseAuthentication();
-app.UseAuthorization();
 
+app.UseHttpsRedirection();
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
